@@ -1,0 +1,89 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.OneR -B 6
+Relation:     Model_Input-weka.filters.unsupervised.attribute.Remove-R8-9-weka.filters.unsupervised.attribute.Reorder-R1,2,3,4,5,6,7,9,8
+Instances:    18000
+Attributes:   9
+              Year
+              Month
+              Time
+              Descript
+              DayOfWeek
+              PdDistrict
+              Resolution
+              Address
+              Category
+Test mode:    split 66.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+Descript:
+	DEFRAUDING AN INNKEEPER	-> FRAUD
+	ENROUTE TO OUTSIDE JURISDICTION	-> WARRANTS
+	LOST PROPERTY	-> NON-CRIMINAL
+	MALICIOUS MISCHIEF	-> VANDALISM
+	AIDED CASE	-> NON-CRIMINAL
+	BREAKING WINDOWS	-> VANDALISM
+	FOUND PERSON	-> MISSING PERSON
+	GRAND THEFT 	-> THEFT
+	MISSING ADULT	-> MISSING PERSON
+	POSSESSION OF METHADONE 	-> DRUG/NARCOTIC
+	BATTERY	-> ASSAULT
+	STOLEN AUTOMOBILE	-> THEFT
+	RESISTING ARREST	-> OTHER OFFENSES
+	TRAFFIC VIOLATION	-> OTHER OFFENSES
+	WARRANT ARREST	-> WARRANTS
+	VOILATION OF LAW	-> OTHER OFFENSES
+	CREDIT CARD THEFT 	-> FRAUD
+	AGGRAVATED ASSAULT 	-> ASSAULT
+	AGGRAVATED ASSAULT	-> ASSAULT
+	SALE OF COCAINE	-> DRUG/NARCOTIC
+(17682/18000 instances correct)
+
+
+Time taken to build model: 0.07 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on training split: 0.05 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        6015               98.2843 %
+Incorrectly Classified Instances       105                1.7157 %
+Kappa statistic                          0.9807
+Mean absolute error                      0.0038
+Root mean squared error                  0.0617
+Relative absolute error                  1.9301 %
+Root relative squared error             19.647  %
+Coverage of cases (0.95 level)          98.2843 %
+Mean rel. region size (0.95 level)      11.1111 %
+Total Number of Instances             6120     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.969    0.000    1.000      0.969    0.984      0.982    0.984     0.972     FRAUD
+                 0.961    0.000    1.000      0.961    0.980      0.978    0.981     0.966     WARRANTS
+                 0.983    0.000    1.000      0.983    0.992      0.990    0.992     0.985     NON-CRIMINAL
+                 0.993    0.000    1.000      0.993    0.996      0.996    0.996     0.994     VANDALISM
+                 0.991    0.000    1.000      0.991    0.996      0.995    0.996     0.992     MISSING PERSON
+                 0.996    0.000    1.000      0.996    0.998      0.998    0.998     0.996     THEFT
+                 0.994    0.000    1.000      0.994    0.997      0.997    0.997     0.995     DRUG/NARCOTIC
+                 0.959    0.000    1.000      0.959    0.979      0.977    0.979     0.963     ASSAULT
+                 1.000    0.019    0.866      1.000    0.928      0.921    0.990     0.866     OTHER OFFENSES
+Weighted Avg.    0.983    0.002    0.985      0.983    0.983      0.982    0.990     0.970     
+
+=== Confusion Matrix ===
+
+   a   b   c   d   e   f   g   h   i   <-- classified as
+ 647   0   0   0   0   0   0   0  21 |   a = FRAUD
+   0 645   0   0   0   0   0   0  26 |   b = WARRANTS
+   0   0 701   0   0   0   0   0  12 |   c = NON-CRIMINAL
+   0   0   0 683   0   0   0   0   5 |   d = VANDALISM
+   0   0   0   0 667   0   0   0   6 |   e = MISSING PERSON
+   0   0   0   0   0 682   0   0   3 |   f = THEFT
+   0   0   0   0   0   0 663   0   4 |   g = DRUG/NARCOTIC
+   0   0   0   0   0   0   0 650  28 |   h = ASSAULT
+   0   0   0   0   0   0   0   0 677 |   i = OTHER OFFENSES
+

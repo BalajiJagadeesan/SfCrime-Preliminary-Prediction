@@ -1,0 +1,69 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.IBk -K 2 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     Model_Input-weka.filters.unsupervised.attribute.Remove-R8-9-weka.filters.unsupervised.attribute.Reorder-R1,2,3,4,5,6,7,9,8
+Instances:    18000
+Attributes:   9
+              Year
+              Month
+              Time
+              Descript
+              DayOfWeek
+              PdDistrict
+              Resolution
+              Address
+              Category
+Test mode:    split 66.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 2 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0.01 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on training split: 8.87 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        5164               84.3791 %
+Incorrectly Classified Instances       956               15.6209 %
+Kappa statistic                          0.8243
+Mean absolute error                      0.038 
+Root mean squared error                  0.1497
+Relative absolute error                 19.2526 %
+Root relative squared error             47.6478 %
+Coverage of cases (0.95 level)          94.1176 %
+Mean rel. region size (0.95 level)      14.5044 %
+Total Number of Instances             6120     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.939    0.040    0.743      0.939    0.829      0.813    0.968     0.901     FRAUD
+                 0.923    0.038    0.751      0.923    0.828      0.810    0.967     0.882     WARRANTS
+                 0.884    0.028    0.807      0.884    0.843      0.823    0.966     0.894     NON-CRIMINAL
+                 0.869    0.022    0.833      0.869    0.851      0.832    0.974     0.900     VANDALISM
+                 0.872    0.008    0.933      0.872    0.902      0.891    0.970     0.930     MISSING PERSON
+                 0.834    0.015    0.878      0.834    0.855      0.838    0.967     0.904     THEFT
+                 0.877    0.015    0.878      0.877    0.878      0.863    0.975     0.914     DRUG/NARCOTIC
+                 0.776    0.008    0.921      0.776    0.842      0.828    0.968     0.894     ASSAULT
+                 0.622    0.003    0.963      0.622    0.756      0.754    0.949     0.830     OTHER OFFENSES
+Weighted Avg.    0.844    0.020    0.856      0.844    0.843      0.828    0.967     0.894     
+
+=== Confusion Matrix ===
+
+   a   b   c   d   e   f   g   h   i   <-- classified as
+ 627  12   9   4   2   4   7   0   3 |   a = FRAUD
+  24 619   6   9   2   2   7   1   1 |   b = WARRANTS
+  35  26 630   1   5   6   4   4   2 |   c = NON-CRIMINAL
+  34  18  27 598   0   2   5   3   1 |   d = VANDALISM
+  23   9  25  11 587  10   3   5   0 |   e = MISSING PERSON
+  22  28  19  25  14 571   4   1   1 |   f = THEFT
+  11  29   8  11   5  11 585   2   5 |   g = DRUG/NARCOTIC
+  24  35  27  22   6  23  12 526   3 |   h = ASSAULT
+  44  48  30  37   8  21  39  29 421 |   i = OTHER OFFENSES
+

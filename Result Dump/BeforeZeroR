@@ -1,0 +1,67 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.ZeroR 
+Relation:     Model_Input-weka.filters.unsupervised.attribute.Remove-R8-9-weka.filters.unsupervised.attribute.Reorder-R1,2,3,4,5,6,7,9,8
+Instances:    18000
+Attributes:   9
+              Year
+              Month
+              Time
+              Descript
+              DayOfWeek
+              PdDistrict
+              Resolution
+              Address
+              Category
+Test mode:    split 66.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+ZeroR predicts class value: FRAUD
+
+Time taken to build model: 0 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on training split: 0.2 seconds
+
+=== Summary ===
+
+Correctly Classified Instances         667               10.8987 %
+Incorrectly Classified Instances      5453               89.1013 %
+Kappa statistic                          0     
+Mean absolute error                      0.1975
+Root mean squared error                  0.3143
+Relative absolute error                100      %
+Root relative squared error            100      %
+Coverage of cases (0.95 level)         100      %
+Mean rel. region size (0.95 level)     100      %
+Total Number of Instances             6120     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.109     FRAUD
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.110     WARRANTS
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.117     NON-CRIMINAL
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.112     VANDALISM
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.110     MISSING PERSON
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.112     THEFT
+                 1.000    1.000    0.109      1.000    0.197      0.000    0.500     0.109     DRUG/NARCOTIC
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.111     ASSAULT
+                 0.000    0.000    0.000      0.000    0.000      0.000    0.500     0.111     OTHER OFFENSES
+Weighted Avg.    0.109    0.109    0.012      0.109    0.021      0.000    0.500     0.111     
+
+=== Confusion Matrix ===
+
+   a   b   c   d   e   f   g   h   i   <-- classified as
+   0   0   0   0   0   0 668   0   0 |   a = FRAUD
+   0   0   0   0   0   0 671   0   0 |   b = WARRANTS
+   0   0   0   0   0   0 713   0   0 |   c = NON-CRIMINAL
+   0   0   0   0   0   0 688   0   0 |   d = VANDALISM
+   0   0   0   0   0   0 673   0   0 |   e = MISSING PERSON
+   0   0   0   0   0   0 685   0   0 |   f = THEFT
+   0   0   0   0   0   0 667   0   0 |   g = DRUG/NARCOTIC
+   0   0   0   0   0   0 678   0   0 |   h = ASSAULT
+   0   0   0   0   0   0 677   0   0 |   i = OTHER OFFENSES
+
